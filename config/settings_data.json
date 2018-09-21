@@ -69,17 +69,6 @@
           "slideshow-1"
         ],
         "settings": {
-          "slider_home_auto": true,
-          "slider_home_rate": "5000",
-          "slider_animation_type": "slide"
-        }
-      },
-      "featured-collection": {
-        "type": "featured-collection",
-        "settings": {
-          "featured_collection": "frontpage",
-          "num_per_row": 3,
-          "num_rows": 2
         }
       },
       "rich-text": {
@@ -97,13 +86,6 @@
           "border_menu": false
         }
       },
-      "announcement-bar": {
-        "type": "announcement-bar",
-        "settings": {
-          "show_announcement": true,
-          "color_bg": "#d34700"
-        }
-      },
       "footer": {
         "type": "footer",
         "settings": {
@@ -115,11 +97,6 @@
       "collection-template": {
         "type": "collection-template",
         "settings": {
-          "collection_products_per_row": "3",
-          "collection_rows_per_page": "4",
-          "collection_tags_enable": false,
-          "collection_sort_enable": true,
-          "product_details_display_method": "always"
         }
       },
       "product-template": {
@@ -134,14 +111,12 @@
       "article-template": {
         "type": "article-template",
         "settings": {
-          "social_sharing": true
         }
       }
     },
     "content_for_index": [
       "slideshow",
-      "rich-text",
-      "featured-collection"
+      "rich-text"
     ]
   },
   "presets": {
@@ -215,17 +190,6 @@
             "slideshow-1"
           ],
           "settings": {
-            "slider_home_auto": true,
-            "slider_home_rate": "5000",
-            "slider_animation_type": "slide"
-          }
-        },
-        "featured-collection": {
-          "type": "featured-collection",
-          "settings": {
-            "featured_collection": "frontpage",
-            "num_per_row": 3,
-            "num_rows": 2
           }
         },
         "rich-text": {
@@ -243,13 +207,6 @@
             "border_menu": false
           }
         },
-        "announcement-bar": {
-          "type": "announcement-bar",
-          "settings": {
-            "show_announcement": true,
-            "color_bg": "#d34700"
-          }
-        },
         "footer": {
           "type": "footer",
           "settings": {
@@ -261,11 +218,6 @@
         "collection-template": {
           "type": "collection-template",
           "settings": {
-            "collection_products_per_row": "3",
-            "collection_rows_per_page": "4",
-            "collection_tags_enable": false,
-            "collection_sort_enable": true,
-            "product_details_display_method": "always"
           }
         },
         "product-template": {
@@ -280,14 +232,12 @@
         "article-template": {
           "type": "article-template",
           "settings": {
-            "social_sharing": true
           }
         }
       },
       "content_for_index": [
         "slideshow",
-        "rich-text",
-        "featured-collection"
+        "rich-text"
       ]
     },
     "Toy": {
@@ -359,17 +309,6 @@
             "slideshow-1"
           ],
           "settings": {
-            "slider_home_auto": true,
-            "slider_home_rate": "5000",
-            "slider_animation_type": "slide"
-          }
-        },
-        "featured-collection": {
-          "type": "featured-collection",
-          "settings": {
-            "featured_collection": "frontpage",
-            "num_per_row": 3,
-            "num_rows": 2
           }
         },
         "rich-text": {
@@ -387,13 +326,6 @@
             "border_menu": false
           }
         },
-        "announcement-bar": {
-          "type": "announcement-bar",
-          "settings": {
-            "show_announcement": true,
-            "color_bg": "#a6674a"
-          }
-        },
         "footer": {
           "type": "footer",
           "settings": {
@@ -405,11 +337,6 @@
         "collection-template": {
           "type": "collection-template",
           "settings": {
-            "collection_products_per_row": "3",
-            "collection_rows_per_page": "4",
-            "collection_tags_enable": false,
-            "collection_sort_enable": true,
-            "product_details_display_method": "always"
           }
         },
         "product-template": {
@@ -424,14 +351,12 @@
         "article-template": {
           "type": "article-template",
           "settings": {
-            "social_sharing": true
           }
         }
       },
       "content_for_index": [
         "slideshow",
-        "rich-text",
-        "featured-collection"
+        "rich-text"
       ]
     }
   }
