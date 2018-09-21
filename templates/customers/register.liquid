@@ -1,36 +1,66 @@
-<div class="page-width">
-  <div class="grid">
-    <div class="grid__item medium-up--one-half medium-up--push-one-quarter">
+{% comment %}
 
-      <div class="form-vertical">
-        {% form 'create_customer' %}
+  This template will be automatically generated for you if the file doesn't exist,
+  but where's the fun in having no control? Define your layout below.
 
-          <h1 class="text-center">{{ 'customer.register.title' | t }}</h1>
+  The 'layout settings.customer_layout' line is inserted at the top of every customer account template.
+  Your theme's settings determine to use the 'default' or 'theme' customer templates.
+  More info:
+    - http://www.tetchi.ca/shopify-theme-from-scratch-part-11/
 
-          {%- if form.errors -%}
-            <div class="form-message form-message--error">
-              {{ form.errors | default_errors }}
-            </div>
-          {%- endif -%}
+{% endcomment %}
 
-          <label for="FirstName">{{ 'customer.register.first_name' | t }}</label>
-          <input type="text" name="customer[first_name]" id="FirstName" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autofocus>
 
-          <label for="LastName">{{ 'customer.register.last_name' | t }}</label>
-          <input type="text" name="customer[last_name]" id="LastName" {% if form.last_name %}value="{{ form.last_name }}"{% endif %}>
+<div class="grid">
 
-          <label for="Email">{{ 'customer.register.email' | t }}</label>
-          <input type="email" name="customer[email]" id="Email" class="{% if form.errors contains 'email' %} input--error{% endif %}" {% if form.email %} value="{{ form.email }}"{% endif %} autocorrect="off" autocapitalize="off">
+  <div class="grid-item large--one-third push--large--one-third">
 
-          <label for="CreatePassword">{{ 'customer.register.password' | t }}</label>
-          <input type="password" name="customer[password]" id="CreatePassword" class="{% if form.errors contains 'password' %} input--error{% endif %}">
+    <h1>{{ 'customer.register.title' | t }}</h1>
 
-          <p class="text-center">
-            <input type="submit" value="{{ 'customer.register.submit' | t }}" class="btn">
-          </p>
+    {% comment %}
+      This form must use 'create_customer'
+    {% endcomment %}
+    {% form 'create_customer' %}
 
-        {% endform %}
+      {{ form.errors | default_errors }}
+
+      <label for="first_name" class="form-label--hidden">
+        <span class="visuallyhidden">
+          {{ 'customer.register.first_name' | t }}
+        </span>
+      </label>
+      <input type="text" name="customer[first_name]" id="first_name" placeholder="{{ 'customer.register.first_name' | t }}" {% if form.first_name %}value="{{ form.first_name }}"{% endif %} autocapitalize="words" autofocus>
+
+      <label for="last_name" class="form-label--hidden">
+        <span class="visuallyhidden">
+          {{ 'customer.register.last_name' | t }}
+        </span>
+      </label>
+      <input type="text" name="customer[last_name]" id="last_name" placeholder="{{ 'customer.register.last_name' | t }}" {% if form.last_name %}value="{{ form.last_name }}"{% endif %} autocapitalize="words">
+
+      <label for="email" class="form-label--hidden">
+        <span class="visuallyhidden">
+          {{ 'customer.register.email' | t }}
+        </span>
+      </label>
+      <input type="email" name="customer[email]" id="email" placeholder="{{ 'customer.register.email' | t }}" {% if form.errors contains "email" %} class="error"{% elsif form.email %} value="{{ form.email }}"{% endif %} autocorrect="off" autocapitalize="off">
+
+      <label for="password" class="form-label--hidden">
+        <span class="visuallyhidden">
+          {{ 'customer.register.password' | t }}
+        </span>
+      </label>
+      <input type="password" name="customer[password]" id="create_password" placeholder="{{ 'customer.register.password' | t }}" {% if form.errors contains "password" %} class="error"{% endif %}>
+
+      <div class="text-center">
+        <p>
+          <input type="submit" value="{{ 'customer.register.submit' | t }}" class="btn">
+        </p>
+        <a href="{{ shop.url }}">{{ 'customer.register.cancel' | t }}</a>
       </div>
-    </div>
+
+    {% endform %}
+
   </div>
+
 </div>
